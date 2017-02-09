@@ -1,5 +1,4 @@
 
-![](https://github.com/SoulmateL/LDrawerDemo/raw/master/GCDrawerTableView.gif)
 
 
 # LDrawerDemo

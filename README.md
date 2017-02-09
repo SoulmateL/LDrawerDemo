@@ -66,33 +66,33 @@
                 transX += translation.x;
                 
                 if (transX<0) {
-                
-                    transX = kMainViewOriginX;
-                }
-                
-                [self updateContrantsWithTransX:transX animation:YES];
-            }
-            
-        }else {
-            transX += translation.x;
-            if (transX > _drawerWidth) {
-                transX = _drawerWidth;
-            }
-            [self updateContrantsWithTransX:transX animation:YES];
-        
-        }
-        [pan setTranslation:CGPointZero inView:self.view];
-    }
-    if (pan.state == UIGestureRecognizerStateEnded) {
-        if (transX <= _drawerWidth/2) {
-            transX = kMainViewOriginX;
-            [self updateContrantsWithTransX:transX animation:YES];
-        }else {
-            transX = _drawerWidth;
-            [self updateContrantsWithTransX:transX animation:YES];
-        }
-    }
-}
+
+                          transX = kMainViewOriginX;
+                      }
+
+                      [self updateContrantsWithTransX:transX animation:YES];
+                  }
+
+              }else {
+                  transX += translation.x;
+                  if (transX > _drawerWidth) {
+                      transX = _drawerWidth;
+                  }
+                  [self updateContrantsWithTransX:transX animation:YES];
+
+              }
+              [pan setTranslation:CGPointZero inView:self.view];
+          }
+          if (pan.state == UIGestureRecognizerStateEnded) {
+              if (transX <= _drawerWidth/2) {
+                  transX = kMainViewOriginX;
+                  [self updateContrantsWithTransX:transX animation:YES];
+              }else {
+                  transX = _drawerWidth;
+                  [self updateContrantsWithTransX:transX animation:YES];
+              }
+          }
+      }
 
 
 /**

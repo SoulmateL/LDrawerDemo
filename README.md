@@ -40,25 +40,39 @@
 
 
 - (void)panAcion:(UIPanGestureRecognizer *)pan {
+
     if (self.mainVC.view.frame.origin.x == _drawerWidth) {
+    
         CGPoint point = [pan locationInView:self.view];
+        
         if (CGRectContainsPoint(CGRectMake(0, 0, _drawerWidth, kScreenHeight), point)) {
             return;
         }
     }
+    
     if (![pan.view isEqual:self.view]) {
+    
         return;
     }
+    
     if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
+    
         CGPoint translation = [pan translationInView:self.view];
+        
         if (translation.x<0) {
+        
             if (self.mainVC.view.frame.origin.x>=0) {
+            
                 transX += translation.x;
+                
                 if (transX<0) {
+                
                     transX = kMainViewOriginX;
                 }
+                
                 [self updateContrantsWithTransX:transX animation:YES];
             }
+            
         }else {
             transX += translation.x;
             if (transX > _drawerWidth) {

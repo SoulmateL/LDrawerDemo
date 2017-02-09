@@ -51,7 +51,7 @@
     }
     if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
         CGPoint translation = [pan translationInView:self.view];
-        if (translation.x<0) {//左滑
+        if (translation.x<0) {
             if (self.mainVC.view.frame.origin.x>=0) {
                 transX += translation.x;
                 if (transX<0) {
@@ -67,7 +67,6 @@
             [self updateContrantsWithTransX:transX animation:YES];
         
         }
-        // 重置滑动距离
         [pan setTranslation:CGPointZero inView:self.view];
     }
     if (pan.state == UIGestureRecognizerStateEnded) {
@@ -98,11 +97,9 @@
 
 }
 
-//侧滑
 - (void)updateContrantsWithTransX:(CGFloat)tx animation:(BOOL)animation {
     transX = tx;
     if (animation) {
-        //视图的动画效果
         [UIView animateWithDuration:kAnimateDuration animations:^{
             self.mainVC.view.frame = CGRectMake(transX, 0, kScreenWidth-transX, kScreenHeight);
             CGFloat scale = 1.0f * transX/_drawerWidth;
@@ -120,7 +117,6 @@
             }
         }];
     }else {
-        //当animation = NO ;去除动画即可
         self.mainVC.view.frame = CGRectMake(transX, 0, kScreenWidth-transX, kScreenHeight);
         CGFloat scale = 1.0f * transX/_drawerWidth;
         self.leftVC.view.transform = CGAffineTransformMakeScale(scale, scale);

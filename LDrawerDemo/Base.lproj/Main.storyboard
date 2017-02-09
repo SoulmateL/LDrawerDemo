@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Lefte View Controller-->
+        <scene sceneID="0B9-ia-Cca">
+            <objects>
+                <viewController storyboardIdentifier="LefteViewController" id="78t-uc-0Ro" customClass="LefteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s9G-PX-wWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lpf-dd-A12"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2B7-A6-QgX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIu-xK-U1S">
+                                <rect key="frame" x="131.5" y="316.5" width="111" height="34"/>
+                                <state key="normal" title="点击推送页面">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentNewViewController:" destination="78t-uc-0Ro" eventType="touchUpInside" id="4HI-h5-s41"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2718562484" green="0.6809379458" blue="0.3869800866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HIu-xK-U1S" firstAttribute="centerY" secondItem="2B7-A6-QgX" secondAttribute="centerY" id="F2l-fh-38a"/>
+                            <constraint firstItem="HIu-xK-U1S" firstAttribute="centerX" secondItem="2B7-A6-QgX" secondAttribute="centerX" id="HhD-Ai-mFs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQG-46-FNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="194"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="3ye-12-DZI">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="VV8-iU-55h" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wAk-hs-prn"/>
+                        <viewControllerLayoutGuide type="bottom" id="SLs-RY-7Sn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SBS-YX-Hez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dt-RL-wou">
+                                <rect key="frame" x="150.5" y="316.5" width="74" height="34"/>
+                                <state key="normal" title="返回抽屉"/>
+                                <connections>
+                                    <action selector="backAction:" destination="VV8-iU-55h" eventType="touchUpInside" id="gRy-8I-kf1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这里是首页,右滑打开抽屉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-uI-oto">
+                                <rect key="frame" x="90" y="323" width="195.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431372549018" green="0.19215686274509802" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YUf-uI-oto" firstAttribute="centerY" secondItem="SBS-YX-Hez" secondAttribute="centerY" id="Pne-Ix-izn"/>
+                            <constraint firstItem="9dt-RL-wou" firstAttribute="centerY" secondItem="SBS-YX-Hez" secondAttribute="centerY" id="SfQ-zD-HDb"/>
+                            <constraint firstItem="9dt-RL-wou" firstAttribute="centerX" secondItem="SBS-YX-Hez" secondAttribute="centerX" id="e6r-vZ-uos"/>
+                            <constraint firstItem="YUf-uI-oto" firstAttribute="centerX" secondItem="SBS-YX-Hez" secondAttribute="centerX" id="fah-Xk-YXj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="9dt-RL-wou" id="GDW-rm-dGV"/>
+                        <outlet property="indexPage" destination="YUf-uI-oto" id="VXA-fL-z3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fse-oJ-T7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="195"/>
+        </scene>
+    </scenes>
+</document>

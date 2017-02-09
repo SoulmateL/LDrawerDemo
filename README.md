@@ -1,4 +1,6 @@
 
+![](https://github.com/SoulmateL/LDrawerDemo/raw/master/GCDrawerTableView.gif)
+
 
 # LDrawerDemo
 一个简单的抽屉效果，只需传入leftViewController和mainViewController且能自定义抽屉宽度

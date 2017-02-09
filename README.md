@@ -36,7 +36,8 @@
  */
 - (void)closeDrawer;
 
-下面是侧滑代码
+# 下面是侧滑代码
+
 
 - (void)panAcion:(UIPanGestureRecognizer *)pan {
     if (self.mainVC.view.frame.origin.x == _drawerWidth) {
